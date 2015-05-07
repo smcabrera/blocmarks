@@ -14,7 +14,9 @@ gem 'haml-rails', '0.9.0'
 gem 'high_voltage', '2.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'maruku', '0.7.2'
 gem 'nav_lynx', '1.1.1'
+gem 'redcarpet', '3.2.3'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'turbolinks'
@@ -41,5 +43,3 @@ group :development do
   gem 'spring-commands-rspec', '~> 1.0.0', group: :test
   gem 'sqlite3'
 end
-
-

@@ -10,10 +10,6 @@
           </li>
 
           <li role="presentation">
-            <%= nav_link_to 'Contact', page_path('contact'), {}, {:wrapper => 'li'} %>
-          </li>
-
-          <li role="presentation">
             <% if current_user %>
               <%= link_to edit_user_registration_path, class: "btn" do %>
                 <span class="glyphicon glyphicon-user"> Settings</span>

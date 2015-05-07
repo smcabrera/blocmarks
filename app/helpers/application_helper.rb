@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def app_name
-    "My App"
+    "Blocmarks"
   end
 
   def company_name

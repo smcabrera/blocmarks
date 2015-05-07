@@ -165,6 +165,7 @@ GEM
     lumberjack (1.0.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    maruku (0.7.2)
     method_source (0.8.2)
     mime-types (2.4.3)
     mini_portile (0.6.2)
@@ -236,6 +237,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.2.0)
       json (~> 1.4)
+    redcarpet (3.2.3)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     rspec (3.2.0)
@@ -337,11 +339,13 @@ DEPENDENCIES
   jazz_fingers
   jbuilder (~> 2.0)
   jquery-rails
+  maruku (= 0.7.2)
   nav_lynx (= 1.1.1)
   pg
   quiet_assets (= 1.1.0)
   rails (= 4.1.7)
   rails_12factor
+  redcarpet (= 3.2.3)
   rspec-rails
   rubocop
   sass-rails (~> 4.0.3)
