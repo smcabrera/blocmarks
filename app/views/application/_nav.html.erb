@@ -2,7 +2,12 @@
       <nav>
         <ul class="nav nav-pills pull-right">
           <li role="presentation">
-            <%= nav_link_to 'Home', root_path, {}, {:wrapper => 'li'} %>
+            <% if current_user %>
+              <% #Only neccessary so that nav_lynx will correctly render the tab as highlighted %>
+              <%= nav_link_to 'Home', bookmarks_path, {}, {:wrapper => 'li'} %>
+            <% else %>
+              <%= nav_link_to 'Home', root_path, {}, {:wrapper => 'li'} %>
+            <% end %>
           </li>
 
           <li role="presentation">

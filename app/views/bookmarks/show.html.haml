@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Url:
+  = @bookmark.url
+%p
+  %b Name:
+  = @bookmark.name
+%p
+  %b User:
+  = @bookmark.user
+%p
+  %b Topic:
+  = @bookmark.topic
+
+= link_to 'Edit', edit_bookmark_path(@bookmark)
+\|
+= link_to 'Back', bookmarks_path
