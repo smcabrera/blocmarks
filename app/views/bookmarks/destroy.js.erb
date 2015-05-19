@@ -1,0 +1,5 @@
+<% if @bookmark.destroyed? %>
+  $('#bookmark' + <%= @bookmark.id %>).hide();
+<% else %>
+    // Add an error message to the dom based on failure
+<% end %>

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :topic do
-    name "MyString"
+    name "Test Topic"
   end
 
 end

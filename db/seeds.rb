@@ -19,9 +19,29 @@ me.save
   user.skip_confirmation!
   user.save
 end
+users = User.all
+
+5.times do
+  Topic.create(
+    :name => Faker::Lorem.sentence(2, false, 0),
+    :user_id => users.sample.id
+  )
+end
+topics = Topic.all
+
+25.times do
+  Bookmark.create(
+    :url => Faker::Internet.url,
+    :name => Faker::Lorem.sentence(2, false, 0),
+    :user_id => users.sample.id,
+    :topic_id => topics.sample.id
+  )
+end
+
 
 puts "Seed finished"
-puts "#{User.all.count} users created"
-
+puts "#{users.count} users created"
+puts "#{topics.count} topics created"
+puts "#{Bookmark.count} bookmarks created"
 
 

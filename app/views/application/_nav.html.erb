@@ -4,7 +4,7 @@
           <li role="presentation">
             <% if current_user %>
               <% #Only neccessary so that nav_lynx will correctly render the tab as highlighted %>
-              <%= nav_link_to 'Home', bookmarks_path, {}, {:wrapper => 'li'} %>
+              <%= nav_link_to 'Home', topics_path, {}, {:wrapper => 'li'} %>
             <% else %>
               <%= nav_link_to 'Home', root_path, {}, {:wrapper => 'li'} %>
             <% end %>

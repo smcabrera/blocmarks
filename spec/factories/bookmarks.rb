@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :bookmark do
-    url "MyString"
-name "MyString"
-user nil
-topic nil
+    url "www.test.com/bookmark"
+    name "Test Bookmark"
+    user nil
+    topic nil
   end
 
 end

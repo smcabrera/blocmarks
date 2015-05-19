@@ -4,6 +4,15 @@
   %b Name:
   = @topic.name
 
+%ul
+  - @topic.bookmarks.each do |bookmark|
+    %li
+      = bookmark.name
+      \|
+      = link_to bookmark.url
+
+= render partial: 'bookmarks/form', locals: {:topic => @topic, :bookmark => Bookmark.new}
+
 = link_to 'Edit', edit_topic_path(@topic)
 \|
 = link_to 'Back', topics_path

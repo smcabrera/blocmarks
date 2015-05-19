@@ -8,11 +8,11 @@
   = @bookmark.name
 %p
   %b User:
-  = @bookmark.user
+  = @bookmark.user.name
 %p
   %b Topic:
-  = @bookmark.topic
+  = @bookmark.topic.name
 
-= link_to 'Edit', edit_bookmark_path(@bookmark)
+= link_to 'Edit', edit_topic_bookmark_path(@topic, @bookmark)
 \|
-= link_to 'Back', bookmarks_path
+= link_to 'Back', topic_bookmarks_path
