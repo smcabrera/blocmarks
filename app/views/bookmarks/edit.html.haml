@@ -1,7 +1,7 @@
 %h1 Editing bookmark
 
-= render 'form'
+= render :partial => 'form', :locals => {:topic => @topic, :bookmark => @bookmark }
 
-= link_to 'Show', @bookmark
+= link_to 'Show', [@topic, @bookmark]
 \|
-= link_to 'Back', bookmarks_path
+= link_to 'Back', topic_bookmarks_path

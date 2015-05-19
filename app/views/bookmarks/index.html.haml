@@ -1,8 +1,11 @@
-%h1 Listing bookmarks
+%h1
+  Bookmarks:
+  = @topic.name
 
-%table
+%table.table
   %thead
     %tr
+
       %th Url
       %th Name
       %th User
@@ -13,15 +16,15 @@
 
   %tbody
     - @bookmarks.each do |bookmark|
-      %tr
+      %tr{ :id => "bookmark-#{bookmark.id}" }
         %td= bookmark.url
         %td= bookmark.name
-        %td= bookmark.user
-        %td= bookmark.topic
-        %td= link_to 'Show', bookmark
-        %td= link_to 'Edit', edit_bookmark_path(bookmark)
-        %td= link_to 'Destroy', bookmark, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= bookmark.user.name
+        %td= bookmark.topic.name
+        %td= link_to 'Show', topic_bookmark_path(bookmark.topic, bookmark)
+        %td= link_to 'Edit', edit_topic_bookmark_path(bookmark.topic, bookmark)
+        %td= link_to 'Destroy', topic_bookmark_path(bookmark.topic, bookmark), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Bookmark', new_bookmark_path
+= link_to 'New Bookmark', new_topic_bookmark_path
