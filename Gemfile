@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'maruku', '0.7.2'
 gem 'nav_lynx', '1.1.1'
-gem 'redcarpet', '3.2.3'
+gem 'redcarpet', '3.5.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'turbolinks'
